@@ -27,7 +27,7 @@ const Record = (props) => (
 );
 
 export default function RecordList() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [records, setRecords] = useState([]);
 
   // This method fetches the records from the database.
@@ -54,7 +54,7 @@ export default function RecordList() {
 
   // This method will delete a record
   async function deleteRecord(id) {
-    await fetch(`Please include your Student API Here`, {
+    await fetch(`https://nodejs-student-api.onrender.com/students/${id}`, {
       method: "DELETE",
     });
 
