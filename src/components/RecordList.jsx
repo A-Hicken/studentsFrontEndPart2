@@ -11,12 +11,17 @@ const Record = (props) => (
     <td>{props.record.currentCollege}</td>
 
     <td>
-      <Link className="btn btn-link" to={`/edit/${props.record._id}`}>
+      <Link
+        className="btn btn-link"
+        style={{ color: "green" }}
+        to={`/edit/${props.record._id}`}
+      >
         Edit
       </Link>
       |
       <button
         className="btn btn-link"
+        style={{ color: "red" }}
         onClick={() => {
           props.deleteRecord(props.record._id);
         }}
